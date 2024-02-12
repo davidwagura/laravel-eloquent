@@ -3,7 +3,7 @@
 @section('content')
     <h1 class="mt-20 text-center font-bold">
         <u>
-            Fill the form below:
+            Add new car:
         </u>
     </h1>
     <div class="create-inputs flex justify-center items-center">
