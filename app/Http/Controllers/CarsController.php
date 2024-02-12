@@ -22,14 +22,22 @@ class CarsController extends Controller
      */
     public function create()
     {
-            }
+        return view ('cars.create');
+    }
 
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
     {
-        //
+        $car = new Car;
+        $car->name = $request->name;
+        $car->founded = $request->founded;
+        $car->description = $request->description;
+        $car->save();
+
+        return redirect(route("cars.index"));
+
     }
 
     /**

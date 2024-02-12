@@ -16,4 +16,3 @@ use App\Http\Controllers\CarsController;
 
 
 Route::resource('/cars', CarsController::class);
-Route::get('/car/create', [CarsController::class, 'create'])->name('car.create');

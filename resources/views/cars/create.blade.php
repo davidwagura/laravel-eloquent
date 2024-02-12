@@ -7,7 +7,7 @@
         </u>
     </h1>
     <div class="create-inputs flex justify-center items-center">
-        <form class="flex flex-col space-y-4 ..." action="{{ route('car.store') }}" method="post">
+        <form class="flex flex-col space-y-4 ..." action="{{ route('cars.store') }}" method="post">
             @csrf
             @method('post')
                 <label class="mr-2" for="name">Name:</label>
