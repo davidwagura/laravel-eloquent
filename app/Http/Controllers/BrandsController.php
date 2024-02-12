@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Brand;
 use Illuminate\Http\Request;
 
 class BrandsController extends Controller
@@ -11,9 +12,9 @@ class BrandsController extends Controller
      */
     public function index()
     {
-        $brands = Brands::all();
+        $brands = Brand::all();
 
-        return view('brand.view', ['brands' => $brands]);
+        return view('brand.index', ['brands' => $brands]);
     }
 
     /**
@@ -32,9 +33,9 @@ class BrandsController extends Controller
         $brand = new Brand;
         $brand->name = $request->name;
         $brand->year = $request->year;
-        $request->save();
+        $brand->save();
 
-        return redirect(route("brand.index"));
+        return redirect(route("brands.index"));
 
     }
 

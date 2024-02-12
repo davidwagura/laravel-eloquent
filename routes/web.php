@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarsController;
 use App\Http\Controllers\ModelController;
+use App\Http\Controllers\BrandsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +19,4 @@ use App\Http\Controllers\ModelController;
 
 Route::resource('/cars', CarsController::class);
 
-Route::resource('brands', ModelController::class);
+Route::resource('/brands', BrandsController::class);
