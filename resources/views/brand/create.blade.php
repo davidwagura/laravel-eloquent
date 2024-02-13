@@ -12,7 +12,7 @@
             @csrf
             @method('post')
                 <label class="mr-2" for="name">Model Name:</label>
-                <select name="name">
+                <select name="name" class="h-8 bg-white">
                     <option value="volkswagen">Volkswagen</option>
                     <option value="toyota">Toyota</option>
                     <option value="stellatins">Stellatins</option>

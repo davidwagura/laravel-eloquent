@@ -18,12 +18,27 @@
                 <tr class="px-4 py-3">
                     <th>Name</th>
                     <th class="pl-6">Year</th>
+                    <th class="pl-6">Delete</th>
+
                 </tr>
                 @foreach ($brands as $brand)
 
                 <tr class="px-4 py-2">
                     <td>{{ $brand->name }}</td>
                     <td>{{ $brand->year }}</td>
+                    <td>
+                        <div>
+                            <button class="bg-red-500 hover:bg-red-300 h-8 px-4 mt-2 ml-10 rounded pr-4">
+                                <form class="text-white" action="{{route('brands.destroy', ['brand' => $brand ]) }}" method="destroy">
+                                    @csrf
+                                    @method('destroy')
+                
+                                    <input type="submit" value="delete"/>
+                                 </form>
+                            </button>
+                        </div>
+                    </td>
+
                 </tr>
                 @endforeach
             </table>

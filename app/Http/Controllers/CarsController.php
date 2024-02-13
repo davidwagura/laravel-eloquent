@@ -45,7 +45,9 @@ class CarsController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $name = Brand::find($name);
+
+        return view('index', ['brands' => $brands]);
     }
 
     /**
