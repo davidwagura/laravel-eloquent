@@ -12,8 +12,12 @@
             @csrf
             @method('post')
                 <label class="mr-2" for="name">Model Name:</label>
-                <input class="border rounded px-2 py-1" type="text" name="name">
-
+                <select name="name">
+                    <option value="volkswagen">Volkswagen</option>
+                    <option value="toyota">Toyota</option>
+                    <option value="stellatins">Stellatins</option>
+                    <option value="mercedes-benz">Mercedes-Benz</option>
+                </select>
                 <label class="mr-2" for="year">Year of Manufucture:</label>
                 <input class="border rounded px-2 py-1" type="text" name="year"><br>
 
