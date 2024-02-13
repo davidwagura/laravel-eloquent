@@ -14,7 +14,11 @@ class Car extends Model
         'founded',
         'description',
     ];
+
     public function brand () {
-        return Brand::where($name = 'brand-name');
+
+        return $this->belongsTo(Brand::class);
+
+
     }
 }

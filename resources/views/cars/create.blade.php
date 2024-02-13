@@ -16,6 +16,9 @@
                 <label class="mr-2" for="founded">Year of Foundation:</label>
                 <input class="border rounded px-2 py-1" type="text" name="founded"><br>
 
+                <label class="mr-2" for="brand_id">Brand Id:</label>
+                <input class="border rounded px-2 py-1" type="text" name="brand_id"><br>
+
                 <label class="mr-2" for="description">Description:</label>
                 <input class="border rounded px-2 py-1" type="text" name="description"><br>
 

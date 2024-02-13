@@ -68,6 +68,9 @@ class BrandsController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $brands->delete();
+    
+        return redirect(route('brand.index'));
+
     }
 }

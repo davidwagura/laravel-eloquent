@@ -21,7 +21,6 @@
                 <label class="mr-2" for="year">Year of Manufucture:</label>
                 <input class="border rounded px-2 py-1" type="text" name="year"><br>
 
-
                 <button class="bg-blue-500 hover:bg-blue-700 h-8 px-4 mt-4 border border-blue-700 rounded pr-4" type="submit">Submit</button>
         </form>
     </div>

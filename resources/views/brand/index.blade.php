@@ -7,7 +7,7 @@
             </button>
         </div>
         <div class="text-left pr-8 mt-0">
-            <button class="bg-blue-500 hover:bg-blue-700 mt-0 text-white h-10 font-bold px-4 border border-blue-700 rounded">
+            <button class="bg-blue-500 hover:bg-blue-700 -mt-12 ml-6 text-white h-10 font-bold px-4 border border-blue-700 rounded">
                 <a href="{{ route('cars.create') }}">Add New Car</a>
             </button>
         </div>
@@ -28,10 +28,10 @@
                     <td>{{ $brand->year }}</td>
                     <td>
                         <div>
-                            <button class="bg-red-500 hover:bg-red-300 h-8 px-4 mt-2 ml-10 rounded pr-4">
-                                <form class="text-white" action="{{route('brands.destroy', ['brand' => $brand ]) }}" method="destroy">
+                            <button class="bg-red-500 hover:bg-red-300 h-8 px-4 pt-2 mt-2 ml-10 rounded pr-4">
+                                <form class="text-white" action="{{route('brands.destroy', ['brand' => $brand ]) }}" method="delete">
                                     @csrf
-                                    @method('destroy')
+                                    @method('delete')
                 
                                     <input type="submit" value="delete"/>
                                  </form>

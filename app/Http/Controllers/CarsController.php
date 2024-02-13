@@ -34,7 +34,9 @@ class CarsController extends Controller
         $car->name = $request->name;
         $car->founded = $request->founded;
         $car->description = $request->description;
+        $car->brand_id = $request->brand_id;
         $car->save();
+
 
         return redirect(route("cars.index"));
 
@@ -43,9 +45,9 @@ class CarsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Car $car)
     {
-        $name = Brand::find($name);
+        $brands = $car->brand();
 
         return view('index', ['brands' => $brands]);
     }
@@ -71,6 +73,8 @@ class CarsController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $cars->delete();
+    
+        return redirect(route('cars.index'));
     }
 }
